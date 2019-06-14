@@ -9,6 +9,7 @@
 \RequirePackage{physics}%
 \RequirePackage{float}%
 \RequirePackage{kvoptions}
+\RequirePackage{booktabs}
 \RequirePackage[automark,headsepline]{scrpage2}
 \KOMAoptions{DIV=14}
 
