@@ -51,7 +51,11 @@
   \def\coursedate{#1}
 }
 
-\ExecuteOptionsX{course, slug, partner, supervisor, room, coursedate}
+\define@key{lab_report.cls}{group}[]{%
+  \def\group{#1}
+}
+
+\ExecuteOptionsX{course, slug, partner, supervisor, room, coursedate, group}
 \ProcessOptionsX%
 
 \renewcommand*{\@date}{\today}
@@ -69,6 +73,7 @@
   \begin{tabular}{l r}%
     Date Performed: & \coursedate\\%
     Partner(s): & \partner\\%
+    {\ifx\group\empty\else\ (Group & \group\\)\fi}%
     Room/Seat: & \room\\%
     Instructor(s): & \supervisor\\%
   \end{tabular}%
