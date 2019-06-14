@@ -29,10 +29,6 @@
 
 \renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
 
-\define@key{lab_report.cls}{course}[]{%
-  \def\course{#1}
-}
-
 \define@key{lab_report.cls}{slug}[]{%
   \def\slug{#1}
 }
@@ -55,7 +51,7 @@
   \def\group{#1}
 }
 
-\ExecuteOptionsX{course, slug, partner, supervisor, room, coursedate, group}
+\ExecuteOptionsX{slug, partner, supervisor, room, coursedate, group}
 \ProcessOptionsX%
 
 \renewcommand*{\@date}{\today}
