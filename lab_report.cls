@@ -14,6 +14,7 @@
 \RequirePackage{tabularx}
 \RequirePackage{calc}
 \RequirePackage{fncylab}
+\RequirePackage{hyperref}
 \RequirePackage[automark,headsepline]{scrpage2}
 \KOMAoptions{DIV=14}
 
