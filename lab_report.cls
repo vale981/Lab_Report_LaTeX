@@ -13,8 +13,13 @@
 \RequirePackage{array}
 \RequirePackage{tabularx}
 \RequirePackage{calc}
+\RequirePackage{fncylab}
 \RequirePackage[automark,headsepline]{scrpage2}
 \KOMAoptions{DIV=14}
+
+\labelformat{section}{section #1}
+\labelformat{figure}{figure #1}
+\labelformat{table}{table #1}
 
 \newcommand{\headsection}{\leftmark}
 \newcommand{\ifset}[2]{\ifx {#1} \empty\else\ {#2}\fi}
@@ -24,13 +29,12 @@
   {\pagemark}
   {}
   {\headsection}
-  {\pagemark}
-  {\@author}
   {\@title\ifset{\lab@slug}{(\lab@slug)}}
+  {\@author}
+  {\pagemark}
 \pagestyle{pagestyle}
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
-\renewcommand{\labelenumi}{\alph{enumi}.}
 \SetupKeyvalOptions{family=lab,prefix=lab@}
 
 \DeclareStringOption{slug}
