@@ -10,6 +10,9 @@
 \RequirePackage{float}%
 \RequirePackage{kvoptions}
 \RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{tabularx}
+\RequirePackage{calc}
 \RequirePackage[automark,headsepline]{scrpage2}
 \KOMAoptions{DIV=14}
 
@@ -64,3 +67,13 @@
 \tableofcontents
 \end{titlepage}
 }
+
+
+\newlength{\conditionwd}
+\newenvironment{conditions}[1][where:]
+  {%
+   #1\tabularx{\textwidth-\widthof{#1}}[t]{
+     >{\(}l<{\)} @{${}-\quad{}$} X@{}
+   }%
+  }
+  {\endtabularx\\[\belowdisplayskip]}
