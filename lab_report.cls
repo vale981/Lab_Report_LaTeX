@@ -22,6 +22,7 @@
 \labelformat{figure}{figure #1}
 \labelformat{table}{table #1}
 
+\newcolumntype{L}{>{\(}l<{\)}} % math-mode version of "l" column type
 \newcommand{\headsection}{\leftmark}
 \newcommand{\ifset}[2]{\ifx {#1} \empty\else\ {#2}\fi}
 \deftripstyle{pagestyle}
@@ -73,12 +74,12 @@
 \end{titlepage}
 }
 
-
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
 \newlength{\conditionwd}
 \newenvironment{conditions}[1][where:]
   {%
    #1\tabularx{\textwidth-\widthof{#1}}[t]{
-     >{\(}l<{\)} @{${}-\quad{}$} X@{}
+     >{\(}r<{\)} @{${}\quad-\quad{}$} l@{}
    }%
   }
   {\endtabularx\\[\belowdisplayskip]}
