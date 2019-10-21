@@ -61,8 +61,10 @@
 \begin{center}%
   \begin{tabular}{l r}%
     Date Performed: & \lab@coursedate\\%
+    \ifx\lab@partner \empty\else
     Partner(s): & \lab@partner\\%
-    Room/Seat: & \lab@room\\%
+    \fi
+    Location: & \lab@room\\%
 
     \ifx\lab@group \empty\else
     Group: & \lab@group\\
