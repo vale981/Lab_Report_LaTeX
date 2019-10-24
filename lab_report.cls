@@ -19,7 +19,7 @@
 \KOMAoptions{DIV=14}
 
 \labelformat{section}{section #1}
-\labelformat{figure}{figure #1}
+\labelformat{figure}{Figure #1}
 \labelformat{table}{table #1}
 
 \newcolumntype{L}{>{\(}l<{\)}} % math-mode version of "l" column type
