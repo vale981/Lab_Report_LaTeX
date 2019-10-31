@@ -15,12 +15,15 @@
 \RequirePackage{calc}
 \RequirePackage{fncylab}
 \RequirePackage{hyperref}
+\RequirePackage{iflang}
 \RequirePackage[automark,headsepline]{scrpage2}
 \KOMAoptions{DIV=14}
 
-\labelformat{section}{section #1}
-\labelformat{figure}{Figure #1}
-\labelformat{table}{table #1}
+\labelformat{section}{\IfLanguageName{ngerman}{Kapitel #1}{section #1}}
+\labelformat{figure}{\IfLanguageName{ngerman}{Abbildung #1}{Figure #1}}
+\labelformat{table}{\IfLanguageName{ngerman}{Tabelle #1}{table #1}}
+
+\sisetup{separate-uncertainty = true}
 
 \newcolumntype{L}{>{\(}l<{\)}} % math-mode version of "l" column type
 \newcommand{\headsection}{\leftmark}
@@ -60,16 +63,16 @@
 {\large \@date\par}
 \begin{center}%
   \begin{tabular}{l r}%
-    Date Performed: & \lab@coursedate\\%
+    \IfLanguageName{ngerman}{Datum der Durchf\"uhrung}{Date Performed}: & \lab@coursedate\\%
     \ifx\lab@partner \empty\else
-    Partner(s): & \lab@partner\\%
+    \IfLanguageName{ngerman}{Partner}{Partner(s)}: & \lab@partner\\%
     \fi
-    Location: & \lab@room\\%
+    \IfLanguageName{ngerman}{Ort}{Location}: & \lab@room\\%
 
     \ifx\lab@group \empty\else
-    Group: & \lab@group\\
+    \IfLanguageName{ngerman}{Gruppe}{Group}: & \lab@group\\
     \fi
-    Supervisor(s): & \lab@supervisor\\%
+    \IfLanguageName{ngerman}{Betreuer}{Supervisor(s)}: & \lab@supervisor\\%
   \end{tabular}%
 \end{center}%
 \tableofcontents
