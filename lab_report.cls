@@ -4,7 +4,7 @@
 
 \RequirePackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
 \RequirePackage{graphicx} % Required for the inclusion of images
-\RequirePackage{natbib} % Required to change bibliography style to APA
+\RequirePackage[style=phys,backend=biber]{biblatex}
 \RequirePackage{amsmath} % Required for some math elements
 \RequirePackage{physics}%
 \RequirePackage{float}%
