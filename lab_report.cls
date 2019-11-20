@@ -16,6 +16,7 @@
 \RequirePackage{fncylab}
 \RequirePackage{hyperref}
 \RequirePackage{iflang}
+\RequirePackage{fixltx2e}
 \RequirePackage[automark,headsepline]{scrpage2}
 \KOMAoptions{DIV=14}
 
