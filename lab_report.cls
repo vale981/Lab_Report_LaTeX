@@ -17,6 +17,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{iflang}
 \RequirePackage{fixltx2e}
+\RequirePackage{csquotes}
 \RequirePackage[automark,headsepline]{scrpage2}
 \KOMAoptions{DIV=14}
 
@@ -82,7 +83,7 @@
 
 \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
 \newlength{\conditionwd}
-\newenvironment{conditions}[1][where:]
+\newenvironment{conditions}[1][\IfLanguageName{ngerman}{Wobei}{Where}:]
   {%
    #1\tabularx{\textwidth-\widthof{#1}}[t]{
      >{\(}r<{\)} @{${}\quad-\quad{}$} l@{}
