@@ -13,11 +13,11 @@
 \RequirePackage{array}
 \RequirePackage{tabularx}
 \RequirePackage{calc}
-\RequirePackage{fncylab}
 \RequirePackage{hyperref}
 \RequirePackage{iflang}
 \RequirePackage{fixltx2e}
 \RequirePackage{csquotes}
+\RequirePackage{xcolor}
 \RequirePackage[automark,headsepline]{scrpage2}
 \KOMAoptions{DIV=14}
 
@@ -26,7 +26,12 @@
 \labelformat{table}{\IfLanguageName{ngerman}{Tabelle #1}{table #1}}
 
 \sisetup{separate-uncertainty = true}
-
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!50!black},
+    citecolor={red!50!black},
+    urlcolor={green!80!black}
+}
 \newcolumntype{L}{>{\(}l<{\)}} % math-mode version of "l" column type
 \newcommand{\headsection}{\leftmark}
 \newcommand{\ifset}[2]{\ifx {#1} \empty\else\ {#2}\fi}
