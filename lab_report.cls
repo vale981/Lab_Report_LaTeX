@@ -17,6 +17,7 @@
 \RequirePackage{iflang}
 \RequirePackage{fixltx2e}
 \RequirePackage{csquotes}
+\RequirePackage{fncylab}
 \RequirePackage{xcolor}
 \RequirePackage[automark,headsepline]{scrpage2}
 \KOMAoptions{DIV=14}
