@@ -19,6 +19,7 @@
 \RequirePackage{csquotes}
 \RequirePackage{fncylab}
 \RequirePackage{xcolor}
+\RequirePackage[table]{xcolor}
 \RequirePackage[automark,headsepline]{scrpage2}
 \KOMAoptions{DIV=14}
 
