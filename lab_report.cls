@@ -36,13 +36,14 @@
 \newcolumntype{L}{>{\(}l<{\)}} % math-mode version of "l" column type
 \newcommand{\headsection}{\leftmark}
 \newcommand{\ifset}[2]{\ifx {#1} \empty\else\ {#2}\fi}
+\newcommand{\ifsetelse}[3]{\ifx {#1} \empty {#3}\else\ {#2}\fi}
 \deftripstyle{pagestyle}
   [0.3pt]
   [0.3pt]
   {\pagemark}
   {}
   {\headsection}
-  {\@title\ifset{\lab@slug}{(\lab@slug)}}
+  {\ifsetelse{\lab@slug}{\lab@slug}{\@title}}
   {\@author}
   {\pagemark}
 \pagestyle{pagestyle}
